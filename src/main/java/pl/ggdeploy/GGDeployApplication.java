@@ -1,13 +1,13 @@
-package pl.ggdeploy.dmtnt;
+package pl.ggdeploy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DmtntApplication {
+public class GGDeployApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DmtntApplication.class, args);
+        SpringApplication.run(GGDeployApplication.class, args);
     }
 
 }

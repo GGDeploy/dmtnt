@@ -11,8 +11,8 @@
     <groupId>pl.ggdeploy</groupId>
     <artifactId>dmtnt</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>dmtnt</name>
-    <description>BoardGame</description>
+    <name>GGDeploy Application</name>
+    <description>BoardGames deployed</description>
     <properties>
         <java.version>15</java.version>
     </properties>
@@ -52,6 +52,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -66,6 +70,14 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>14</source>
+                    <target>14</target>
                 </configuration>
             </plugin>
         </plugins>
