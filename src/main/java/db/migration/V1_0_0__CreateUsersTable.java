@@ -4,7 +4,7 @@ import org.flywaydb.core.api.migration.BaseJavaMigration;
 import org.flywaydb.core.api.migration.Context;
 import org.flywaydb.core.internal.jdbc.JdbcTemplate;
 
-public class V1_0_0__CreateCustomersTable extends BaseJavaMigration {
+public class V1_0_0__CreateUsersTable extends BaseJavaMigration {
 
     @Override
     public void migrate(Context context) throws Exception {
