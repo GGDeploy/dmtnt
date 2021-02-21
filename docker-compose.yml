@@ -1,0 +1,28 @@
+version: '3.5'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: game_api
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+    - 8080:8080
+
+  wait-for-it:
+    image: willwill/wait-for-it
+    entrypoint: "./wait-for-it.sh -t 300 db:5432 --strict"
+
+  game_api:
+    build: ./
+    ports:
+      [9081:9081]
+    depends_on:
+      - db
+    restart: on-failure
